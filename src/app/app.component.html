@@ -1,0 +1,29 @@
+<div class="header">
+    <h2>Documents</h2>
+    <p>Search documents or select Category</p>
+</div>
+<div class="container">
+  <div class="sidebar">
+      <ul>
+        <li [ngClass]="{'active':selectedItem == 'all'}" (click)="getList('all')">All</li>
+        <li *ngFor="let item of categorys_list" [ngClass]="{'active':selectedItem == item}" (click)="getList(item)">{{item}}</li>
+      </ul>
+  </div>
+  <div class="content">
+      <div class="search_Box">
+          <input type="text" #filterInput (input)="filterCategoryList(filterInput.value)">
+          <div class="grid_list">
+            <div class="grid" *ngFor="let item of categorys">
+              <span [ngClass]="{'table_flag':item.category === 'Financial',
+              'Technical_falg':item.category === 'Technical',
+              'Human_resource_falg':item.category === 'Human resource',
+              'Marketing_falg':item.category === 'Marketing'}">{{item.category}}</span>
+              <h1>{{item.category_title}}</h1>
+            </div>
+            <div class="listNotFound" *ngIf="categorys.length === 0">
+              <p>No Category Found</p>
+            </div>
+          </div>
+      </div>
+  </div>
+</div>

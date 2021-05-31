@@ -1,0 +1,155 @@
+/*-- css_reset --*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    font-family: 'Open Sans', sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+input{
+    font-family: 'Open Sans', sans-serif;
+}
+/*-- //css_reset --*/
+body{
+    background: #eee;
+}
+/*-- header --*/
+.header{
+    padding: 30px;
+}
+.header h2{
+    font-size: 24px;
+    font-weight:600;
+}
+.header p{
+    font-size: 16px;
+    font-weight:600;
+    margin-top: 10px;
+}
+.container{
+    width:90%;
+    margin: 0 auto;
+}
+.sidebar{
+    float: left;
+    width:15%;
+}
+.sidebar ul li{
+    font-size: 14px;
+    text-transform: capitalize;
+    color: #999;
+    margin: 20px 0;
+    cursor: pointer;
+}
+.sidebar ul li.active{
+    color:#000;
+}
+.content{
+    float: right;
+    width:85%;
+}
+.search_Box input{
+    width: 100%;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    color:#999;
+    margin-bottom: 20px;
+}
+.content .grid{
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 10px;
+    background: #FFF;
+    width: 22.1%;
+    float: left;
+    margin: 5px;
+    min-height: 100px;
+    position: relative;
+}
+.content .grid span{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 12px;
+    padding: 5px 20px;
+    color: #333;
+    border-radius: 30px;
+}
+.Technical_falg{
+    background: #bdb1ff;
+}
+.table_flag{
+    background: #ddd;
+}
+.Human_resource_falg{
+    background: #a6ffb9;
+}
+.Marketing_falg{
+    background: #ffcece;
+}
+.content .grid h1{
+    font-size: 16px;
+    margin-top: 70px;
+    margin-left: 20px;
+    font-weight: 600;
+}
+@media(max-width:720px){
+    .sidebar,.content,.content .grid{
+        float: none;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .sidebar ul li{
+        display: inline-block;
+        margin: 0 5px;
+    }
+    .content .grid{
+        margin: 5px 0;
+    }
+    .active{
+        border-bottom: 2px solid #000;
+    }
+    .content{
+        margin-top: 10px;
+    }
+}
